@@ -14,6 +14,7 @@ It is built with [Zine](https://zine-ssg.io), a static site generator written in
 | `assets/vendor/98.css/` | 98.css and its fonts, as published (see its `readme.md`) |
 | `assets/projects/` | The projects' logos and screenshots, copied from their repositories (see its `readme.md`) |
 | `assets/brand/` | The wordmark and the avatar, served at `/brand/` |
+| `tools/favicon.sh` | Writes the icons in `assets/` (`favicon.ico`, `icon-192.png`, `apple-touch-icon.png`) from the avatar |
 | `zine.ziggy` | Zine's configuration |
 | `build.zig` | Builds the site |
 

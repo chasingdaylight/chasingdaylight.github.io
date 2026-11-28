@@ -8,6 +8,10 @@
     .static_assets = [
         // the wordmark and avatar, at the addresses they always had
         "brand",
+        // the icons tools/favicon.sh writes, at the site's root
+        "favicon.ico",
+        "icon-192.png",
+        "apple-touch-icon.png",
         // the fonts 98.css loads from beside itself
         "vendor/98.css/ms_sans_serif.woff",
         "vendor/98.css/ms_sans_serif.woff2",

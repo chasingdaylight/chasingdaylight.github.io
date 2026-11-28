@@ -1,0 +1,15 @@
+---
+.title = "zfls",
+.description = "A Fortran language server written in Zig.",
+.date = .date("2026-10-12T00:00:00"),
+.layout = "project.shtml",
+.custom = .{
+    .logo = "projects/zfls/logo.svg",
+    .language = "Zig",
+    .source = "https://github.com/cesiumlang/zfls",
+},
+---
+
+zfls is a native port of [fortls](https://github.com/fortran-lang/fortls), the Python Fortran language server. It speaks the same Language Server Protocol subset, with the same command line options and configuration files.
+
+It then goes further: an outline tree, folding, semantic highlighting, code lenses, call and type hierarchies, inlay hints, code actions, formatting, and include directories and preprocessor definitions read from the project's build files.

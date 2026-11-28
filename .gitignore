@@ -1,0 +1,12 @@
+/.claude/
+
+# machine-specific editor settings (absolute paths)
+/.vscode/settings.json
+
+# Zig
+.zig-cache*/
+zig-out/
+zig-pkg/
+.zigversion
+
+*.log

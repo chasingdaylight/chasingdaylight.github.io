@@ -1,0 +1,17 @@
+---
+.title = "RandyOS",
+.description = "A very basic operating system for a very basic dude.",
+.date = .date("2023-11-17T00:00:00"),
+.layout = "project.shtml",
+.custom = .{
+    .logo = "projects/randyos/logo.svg",
+    .logo_style = "logo wide dark",
+    .language = "Zig",
+    .website = "https://randyos.org/",
+    .source = "https://codeberg.org/randyos/randyos",
+},
+---
+
+RandyOS is an operating system written from scratch in Zig, with its own UEFI bootloader and kernel. It boots on x86_64 PCs and Intel Macs today.
+
+It is built toward a specific set of machines, not general support for every platform: the Raspberry Pi, Apple Silicon Macs and the PowerPC iBook G3 are next.

@@ -1,0 +1,20 @@
+.{
+    .name = .chasingdaylight_dev,
+    .fingerprint = 0xfe368b6ee7abbbd0,
+    .version = "0.1.0",
+    .minimum_zig_version = "0.17.0",
+    .dependencies = .{
+        .zine = .{
+            .url = "git+https://github.com/kristoff-it/zine?ref=v0.14.1#6cacc90b1dfdc414859683e85e05c93602a4afd1",
+            .hash = "zine-0.14.1-ou6nIFeNFwCxFPt29bP6F-PubAggNwx148VrLX4Oo4zN",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "zine.ziggy",
+        "content",
+        "layouts",
+        "assets",
+    },
+}

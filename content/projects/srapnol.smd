@@ -1,0 +1,16 @@
+---
+.title = "srapnol",
+.description = "A sparse nonlinear optimizer written from scratch in Zig.",
+.date = .date("2026-09-15T00:00:00"),
+.layout = "project.shtml",
+.custom = .{
+    .language = "Zig",
+    .source = "https://github.com/randyos-org/srapnol",
+},
+---
+
+srapnol is the SQP Reduced-Hessian Active-Set Partitioning Nonlinear Optimization Library. Its method is sequential quadratic programming in the style of Gill, Murray and Saunders.
+
+A problem is given as `F(x) = f(x) + A x`, with bounds on `x` and `F`, a constant sparse `A`, and a sparse Jacobian supplied by the user for the nonlinear part `f`.
+
+It is an early project, developed with a controlled set of documentation to NASA's software engineering standards.

@@ -1,0 +1,7 @@
+<extend template="listing.shtml">
+<head id="head">
+  <title :text="$page.title.suffix(' · ', $site.title)"></title>
+</head>
+<div id="intro">
+  <h1 class="hidden" :text="$page.title"></h1>
+</div>

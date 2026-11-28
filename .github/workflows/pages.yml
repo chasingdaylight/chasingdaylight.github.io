@@ -1,0 +1,74 @@
+# Publishes the site with GitHub Pages, at chasingdaylight.dev: the pages in
+# content/, built by Zine (zig build).
+#
+# Runs on every push to main, and by hand (Actions > Site > Run workflow),
+# where the site can be built without being published, to check it.
+name: Site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Publish the site (else only build it, to check it)
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+defaults:
+  run:
+    shell: bash
+
+# The Zig that builds the site, set by hand; keep minimum_zig_version in
+# build.zig.zon in step with it.
+env:
+  ZIG_VERSION: 0.17.1
+
+jobs:
+  build:
+    name: Build the site
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: randyos-org/setup-zig@node24  # v2.2.1 on Node.js 24, until upstream releases it
+        with:
+          version: ${{ env.ZIG_VERSION }}
+
+      # Zine is built from source: keep what Zig built
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/zig
+            .zig-cache
+          key: zig-${{ runner.os }}-${{ hashFiles('build.zig.zon') }}
+
+      - name: Build the site
+        run: zig build
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: zig-out/public
+
+  deploy:
+    name: Publish
+    needs: build
+    if: ${{ github.event_name == 'push' || inputs.publish }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

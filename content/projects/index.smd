@@ -1,0 +1,6 @@
+---
+.title = "Projects",
+.description = "The open source projects of Chasing Daylight.",
+.date = .date("2026-11-27T00:00:00"),
+.layout = "projects.shtml",
+---

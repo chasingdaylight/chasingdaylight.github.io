@@ -1,0 +1,22 @@
+---
+.title = "Skein",
+.description = "Requirements, specifications and traceability as plain text in git.",
+.date = .date("2026-11-24T00:00:00"),
+.layout = "project.shtml",
+.custom = .{
+    .logo = "projects/skein/logo.svg",
+    .language = "Zig",
+    .website = "https://skein.chasingdaylight.dev/",
+    .source = "https://github.com/chasingdaylight/skein",
+},
+---
+
+Skein holds the threads of a project together: what is needed, what is decided, what is specified, how it is built, and what proves it. Every item is a piece of Markdown in the repository with a stable ID, a type and typed links.
+
+Skein checks the whole graph, traces it in both directions, flags what a change makes suspect, imports test results, plans the work, and generates the views a team reads: specifications, matrices, coverage, plans and reports.
+
+It is for projects that want the rigor of requirements management without a database or a proprietary tool. It comes as one program for Linux, macOS and Windows, with a language server, a VS Code extension, a web interface and adapters for GitHub, GitLab and Forgejo.
+
+[The trace graph of a project, in the VS Code extension](<$image.siteAsset('projects/skein/graph.png').alt('Screenshot of the Skein graph view in VS Code')>)
+
+[The board of planned work, in the VS Code extension](<$image.siteAsset('projects/skein/board.png').alt('Screenshot of the Skein board view in VS Code')>)

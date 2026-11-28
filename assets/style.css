@@ -1,0 +1,142 @@
+/* The site's own rules, on top of 98.css (vendor/98.css). */
+
+:root {
+  /* the wordmark's dark variant would vanish on a silver window */
+  color-scheme: only light;
+  --desktop: #008080;
+  --taskbar-height: 30px;
+  --raised: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+  --pressed: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
+}
+
+* { box-sizing: border-box; }
+
+html { background: var(--desktop); }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Pixelated MS Sans Serif", Arial, sans-serif;
+  font-size: 11px;
+  -webkit-font-smoothing: none;
+}
+
+.desktop {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 12px calc(var(--taskbar-height) + 24px);
+}
+
+.intro:empty { display: none; }
+
+/* headings that are window titles keep the title bar's size */
+.title-bar-text { margin-top: 0; margin-bottom: 0; font-size: 11px; }
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.window-body p { margin: 0 0 8px; line-height: 1.5; }
+.window-body a { color: #00f; }
+.window-body a:focus-visible { outline: 1px dotted #000; }
+
+.wordmark { text-align: center; }
+.wordmark img { width: 100%; max-width: 300px; height: auto; }
+
+.lead { font-weight: 700; }
+
+/* a project's logo, beside its text */
+.logo { float: right; width: 96px; height: auto; margin: 0 0 8px 12px; }
+/* logo_style in a page's front matter: a wide logo, one drawn for a dark ground */
+.logo.wide { width: 180px; }
+.logo.dark { padding: 8px; background: #000; box-shadow: inset -1px -1px #fff, inset 1px 1px grey; }
+.buttons { clear: both; }
+
+/* screenshots, in a sunken frame */
+.content figure { margin: 0 0 8px; clear: both; }
+.content figcaption { text-align: center; color: #444; }
+.content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 4px;
+  padding: 2px;
+  background: #fff;
+  box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
+}
+
+.content h2 { margin: 12px 0 6px; font-size: 11px; font-weight: 700; }
+.content ul { margin: 0 0 8px; padding-left: 20px; line-height: 1.5; }
+.content code { font-family: "Courier New", monospace; font-size: 12px; }
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
+  gap: 10px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0;
+}
+.project legend { font-weight: 700; }
+.project .facts { color: #444; }
+.project .facts span + span::before { content: " \00b7  "; }
+.project .buttons { margin-top: auto; }
+
+.buttons { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 0; }
+
+/* a link that looks like a 98.css button */
+.btn,
+.window-body a.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 75px;
+  min-height: 23px;
+  padding: 0 12px;
+  background: silver;
+  box-shadow: var(--raised);
+  color: #222;
+  text-decoration: none;
+}
+.btn:active { box-shadow: var(--pressed); }
+.btn:focus-visible { outline: 1px dotted #000; outline-offset: -4px; }
+
+.taskbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: var(--taskbar-height);
+  padding: 4px 3px 2px;
+  background: silver;
+  box-shadow: inset 0 1px #dfdfdf, inset 0 2px #fff;
+}
+.taskbar .btn { min-width: 0; min-height: 22px; padding: 0 8px; }
+.taskbar .start { font-weight: 700; }
+.taskbar .tray {
+  margin-left: auto;
+  padding: 4px 10px;
+  box-shadow: inset -1px -1px #fff, inset 1px 1px grey;
+  white-space: nowrap;
+}
+
+@media (max-width: 420px) {
+  .taskbar .tray { display: none; }
+}

@@ -1,0 +1,17 @@
+---
+.title = "PyCountdown",
+.description = "Linked countdown timers and clocks, in the style of a mission control wall clock.",
+.date = .date("2015-04-22T00:00:00"),
+.layout = "project.shtml",
+.custom = .{
+    .language = "Python",
+    .website = "https://pypi.org/project/pycountdown/",
+    .source = "https://github.com/emanspeaks/PyCountdown",
+},
+---
+
+PyCountdown is a desktop application that shows many countdown timers and clocks at once: absolute clocks in several time scales (UTC, TAI, GPS time), time zone clocks, and timers linked to one another.
+
+Display formats can be customized, thresholds change a clock's color and sound an alert, and the set of clocks is kept in a JSON file.
+
+[The main window, with its clocks and timers](<$image.siteAsset('projects/pycountdown/main-window.png').alt('Screenshot of the PyCountdown main window')>)

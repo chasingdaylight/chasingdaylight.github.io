@@ -1,0 +1,15 @@
+---
+.title = "rstd",
+.description = "Randy's Standard Library: a supplement to the Zig standard library.",
+.date = .date("2026-07-19T00:00:00"),
+.layout = "project.shtml",
+.custom = .{
+    .language = "Zig",
+    .website = "https://randyos.org/docs/rstd/",
+    .source = "https://github.com/randyos-org/rstd",
+},
+---
+
+The largest part of rstd is `linalg`: a Zig-native, column-major BLAS and LAPACK, with the best open source method for each routine ported into Zig and results that are bit-identical for any thread count.
+
+Beside it are `rgl` (fonts, text layout and shaders), and smaller pieces for cryptography, zip archives, compound files, logging and build helpers. zfls and RandyOS both build on it.

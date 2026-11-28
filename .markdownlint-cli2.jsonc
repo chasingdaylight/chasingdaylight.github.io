@@ -1,0 +1,10 @@
+{
+  "ignores": [
+    "**/node_modules/**",
+    "zig-pkg/**",
+    ".zig-cache/**",
+    "zig-out/**",
+    // code of other projects, as they published it
+    "assets/vendor/**",
+  ]
+}

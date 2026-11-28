@@ -1,0 +1,40 @@
+<extend template="base.shtml">
+<head id="head">
+  <super>
+</head>
+<main id="desktop">
+  <div class="intro" id="intro">
+    <super>
+  </div>
+  <section class="window" aria-labelledby="projects-title">
+    <div class="title-bar">
+      <h2 class="title-bar-text" id="projects-title">Projects</h2>
+      <div class="title-bar-controls" aria-hidden="true">
+        <button aria-label="Minimize" tabindex="-1"></button>
+        <button aria-label="Maximize" tabindex="-1"></button>
+        <button aria-label="Close" tabindex="-1"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <div class="projects" :loop="$site.page('projects').subpages()">
+        <fieldset class="project">
+          <legend :text="$loop.it.title"></legend>
+          <p :text="$loop.it.description"></p>
+          <p class="facts">
+            <span :text="$loop.it.custom.get('language')"></span>
+            <span :text="$loop.it.date.format('since 2006')"></span>
+          </p>
+          <p class="buttons">
+            <a class="btn" href="$loop.it.link()">Details</a>
+            <ctx :if="$loop.it.custom.get?('website')"><a class="btn" href="$if">Website</a></ctx>
+            <a class="btn" href="$loop.it.custom.get('source')">Source</a>
+          </p>
+        </fieldset>
+      </div>
+    </div>
+    <div class="status-bar">
+      <p class="status-bar-field">Newest first</p>
+      <p class="status-bar-field">Open source, MIT licensed</p>
+    </div>
+  </section>
+</main>

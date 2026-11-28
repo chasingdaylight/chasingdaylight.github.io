@@ -1,0 +1,22 @@
+<extend template="listing.shtml">
+<head id="head">
+  <title :text="$site.title"></title>
+</head>
+<div id="intro">
+  <section class="window" aria-labelledby="home-title">
+    <div class="title-bar">
+      <h1 class="title-bar-text" id="home-title" :text="$page.title"></h1>
+      <div class="title-bar-controls" aria-hidden="true">
+        <button aria-label="Minimize" tabindex="-1"></button>
+        <button aria-label="Maximize" tabindex="-1"></button>
+        <button aria-label="Close" tabindex="-1"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <p class="wordmark">
+        <img src="$site.asset('brand/wordmark.svg').link()" alt="Chasing Daylight" width="870" height="465">
+      </p>
+      <div class="content" :html="$page.content()"></div>
+    </div>
+  </section>
+</div>

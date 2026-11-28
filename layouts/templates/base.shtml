@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head id="head">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="$page.description">
+    <link rel="icon" type="image/svg+xml" href="$site.asset('brand/avatar.svg').link()">
+    <link rel="stylesheet" href="$site.asset('vendor/98.css/98.css').link()">
+    <link rel="stylesheet" href="$site.asset('style.css').link()">
+    <super>
+  </head>
+  <body>
+    <main class="desktop" id="desktop">
+      <super>
+    </main>
+    <nav class="taskbar" aria-label="Site">
+      <a class="btn start" href="$site.page('').link()">
+        <img src="$site.asset('brand/avatar.svg').link()" alt="" width="16" height="16">
+        <span>Start</span>
+      </a>
+      <a class="btn" href="$site.page('projects').link()">Projects</a>
+      <a class="btn" href="https://github.com/chasingdaylight">GitHub</a>
+      <span class="tray">Chasing Daylight</span>
+    </nav>
+  </body>
+</html>

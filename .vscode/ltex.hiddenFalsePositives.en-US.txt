@@ -1,0 +1,1 @@
+{"rule":"GITHUB","sentence":"^\\Qchasingdaylight.github.io\\E$"}

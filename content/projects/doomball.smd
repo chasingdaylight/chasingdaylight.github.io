@@ -1,0 +1,18 @@
+---
+.title = "Doomball",
+.description = "Doom-themed pinball, in the style of the classic Windows pinball games.",
+.date = .date("2026-11-26T00:00:00"),
+.layout = "project.shtml",
+.custom = .{
+    .language = "Zig",
+    .source = "https://github.com/randyos-org/doomball",
+},
+---
+
+Doomball is a pinball table in prerendered 2.5D with a status panel beside it, with art and sound of its own in the spirit of early-90s shooters.
+
+Missions promote you from Private to General, demons roam a pit of toxic sludge, and three keys open the gate to a three-ball multiball.
+
+The game core is platform independent: it renders into a framebuffer and reads a small input struct, so a port only implements the platform layer. Releases are for Windows, on x86_64 and arm64.
+
+[The table and its status panel, with a demon in the pit](<$image.siteAsset('projects/doomball/table.png').alt('Screenshot of the Doomball table and status panel')>)

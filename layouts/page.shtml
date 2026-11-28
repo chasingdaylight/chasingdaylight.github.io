@@ -1,0 +1,19 @@
+<extend template="base.shtml">
+<head id="head">
+  <title :text="$page.title.suffix(' · ', $site.title)"></title>
+</head>
+<main id="desktop">
+  <article class="window" aria-labelledby="page-title">
+    <div class="title-bar">
+      <h1 class="title-bar-text" id="page-title" :text="$page.title"></h1>
+      <div class="title-bar-controls" aria-hidden="true">
+        <button aria-label="Minimize" tabindex="-1"></button>
+        <button aria-label="Maximize" tabindex="-1"></button>
+        <button aria-label="Close" tabindex="-1"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <div class="content" :html="$page.content()"></div>
+    </div>
+  </article>
+</main>

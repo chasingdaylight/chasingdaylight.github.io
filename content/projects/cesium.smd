@@ -1,0 +1,16 @@
+---
+.title = "Cesium",
+.description = "A compiled, statically typed systems programming language for mathematical computing.",
+.date = .date("2025-09-10T00:00:00"),
+.layout = "project.shtml",
+.custom = .{
+    .logo = "projects/cesium/logo.svg",
+    .language = "C",
+    .website = "https://cesiumlang.org/",
+    .source = "https://github.com/cesiumlang/cesium",
+},
+---
+
+Cesium is designed for mathematical computing and linear algebra. It puts performance, explicit memory management and mathematical expressiveness first, and stays compatible with the C ABI.
+
+Its design draws most on C, Zig and MATLAB. The name is the element of the atomic clock: a language whose first aim is speed at run time shares a name with what defines the second.

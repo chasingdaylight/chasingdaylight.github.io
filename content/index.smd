@@ -1,0 +1,10 @@
+---
+.title = "Chasing Daylight",
+.description = "A developer who is always chasing daylight. Open source software by Randy Eckman.",
+.date = .date("2026-11-21T00:00:00"),
+.layout = "home.shtml",
+---
+
+A developer who is always chasing daylight.
+
+This is the open source software of Randy Eckman: a programming language, an operating system, the libraries under them, and the tools that keep the work in order. Most of it is written in Zig.

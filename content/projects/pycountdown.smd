@@ -5,7 +5,7 @@
 .layout = "project.shtml",
 .custom = .{
     .language = "Python",
-    .website = "https://pypi.org/project/pycountdown/",
+    .website = "https://github.com/emanspeaks/PyCountdown/blob/master/docs/user_guide.md",
     .source = "https://github.com/emanspeaks/PyCountdown",
 },
 ---

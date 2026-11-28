@@ -7,6 +7,7 @@
     .logo = "projects/zfls/logo.svg",
     .language = "Zig",
     .source = "https://github.com/cesiumlang/zfls",
+    .website = "https://marketplace.visualstudio.com/items?itemName=cesiumlang.zfls",
 },
 ---
 
